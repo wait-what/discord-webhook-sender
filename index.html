@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Discord webhook sender</title>
+
+    <link rel="stylesheet" href="./materialize/materialize.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="./materialize/icons.css" rel="stylesheet">
+</head>
+
+<body class="white-text center container">
+    <h2>Discord webhook tool</h2><br>
+
+    <div class="input-field">
+        <input placeholder="Paste the webhook's URL here" id="webhook_url" type="text" class="validate white-text">
+        <label for="webhook_url">Webhook URL</label>
+    </div>
+
+    <h3>Send</h3>
+    <div>
+        <div class="input-field">
+            <textarea placeholder="Content of the message" id="msg_content" type="text"
+                class="validate white-text materialize-textarea"></textarea>
+            <label for="msg_content">Message content</label>
+        </div>
+
+        <div class="input-field">
+            <textarea placeholder="Embed JSON" id="embed_content" type="text"
+                class="validate white-text materialize-textarea"></textarea>
+            <label for="embed_content">Embed</label>
+        </div>
+
+        <button class="btn blue waves-effect hoverable z-depth-2" onclick="window.send()"><i
+                class="material-icons right">send</i>Send</button>
+    </div>
+
+    <br>
+    <hr>
+
+    <h3>Rename</h3>
+    <div>
+        <div class="input-field">
+            <input placeholder="New name" id="new_name" type="text" class="validate white-text">
+            <label for="new_name">Name</label>
+        </div>
+
+        <button class="btn blue waves-effect hoverable z-depth-2" onclick="window.patch()"><i
+                class="material-icons right">create</i>Rename</button>
+    </div>
+
+    <br>
+    <hr>
+
+    <h3>Delete</h3>
+    <div>
+        <button class="btn blue waves-effect hoverable z-depth-2" onclick="window.deleteWebhook()"><i
+            class="material-icons right">delete_forever</i>Delete</button>
+    </div>
+
+    <br>
+    <hr>
+
+    <h4>How to get a webhook URL</h4>
+    <div class="container center">
+        <p>
+            You need to have the "Manage webhooks" permission (or be an admin) to create a webhook. Go to
+            your server's settings > Webhooks > Create webhook > Set the name, channel and avatar. > Copy
+            the URL > Save the webhook > Done.<br>
+            You can later rename and delete it through this program or in the server's settings.
+        </p>
+    </div>
+    
+    <br>
+    <hr>
+
+    <footer class="container center">
+        <p>By BarkingDog#4975</p>
+    </footer><br>
+
+
+    <script src="./materialize/materialize.min.js"></script>
+</body>
+
+</html>

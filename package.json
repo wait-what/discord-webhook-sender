@@ -1,0 +1,25 @@
+{
+    "name": "discord-webhook-sender",
+    "version": "1.0.0",
+    "description": "Electron stuff to execute discord webhooks",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": "https://gitlab.com/BarkingDog/discord-webhook-sender.git",
+    "keywords": [
+        "discord",
+        "webhook"
+    ],
+    "author": "BarkingDog#4975",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^5.0.2"
+    },
+    "dependencies": {
+        "electron-packager": "^13.1.1",
+        "global": "^4.4.0",
+        "superagent": "^5.1.0",
+        "valid-url": "^1.0.9"
+    }
+}
